@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+    Logs Viewing Page
+    This HTML document serves as the user interface for viewing logs. It includes styling references for layout and aesthetics, as well as functionality to fetch and display log data in real time.
+
+    Structure and Resources:
+    - The document is structured with basic HTML elements, including a button for logging out, a progress bar span, and a preformatted text block to display the logs.
+    - It links to external CSS for styling, specifically 'login.css' and 'page.css' for consistent visual design across the application.
+    - External libraries such as jQuery, toastr for notifications, and Bootstrap for UI components are included for enhanced interactivity and design.
+    - Firebase libraries are incorporated to manage user authentication states and interactions.
+    - Custom JavaScript files 'auth.js' and 'main.js' are linked to handle authentication logic and the main application functionality, respectively.
+
+    Functionality:
+    - The logout button allows the user to sign out of the application securely.
+    - The 'pre' element with id 'log' is used to display the fetched log data, which is updated regularly by the 'fetchLogs' function called in 'main.js'.
+    - The page utilizes toastr for displaying informational, success, or error messages related to user actions like signing out.
+-->
+<html>
+<head>
+    <title>Logs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <div>
+        <button class="btn-signout" onclick="signOut()">Logout</button>
+        <span id="progress-bar">Please execute the scripts to see the real-time output.............</span>
+        <pre id="log"></pre>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

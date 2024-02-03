@@ -197,7 +197,7 @@ curl -X GET "http://yourdomain.com/api/view_logs" \
       }
     ```
 ---
-- 🔭 I’m currently working on this Automated Healthcare EDI Generator & Submission System along with other smaller AWS projects.
+- 🔭 I’m currently working on an Automated Healthcare EDI Generator & Submission System along with other smaller AWS projects.
 - 🌱 I’m continually learning and integrating new technologies like AWS to enhance system performance and scalability.
 
 ---
